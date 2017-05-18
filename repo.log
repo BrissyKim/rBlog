@@ -1,0 +1,17 @@
+commit f0798f00294e598b675c2436f5d226eae8c21531
+Author: Seyoung Kim <ksy4961@gmail.com>
+Date:   Wed May 17 23:52:21 2017 +0900
+
+    ~Completed Implementing the Application UI and Started Admin CRUD
+
+commit 402ca309924acc4da51bb6de8ab9581279b79b0b
+Author: Seyoung Kim <ksy4961@gmail.com>
+Date:   Wed May 17 14:40:15 2017 +0900
+
+    Fixed css
+
+commit 31cc704da8a8b37f71f46c2361c58e6df6583fec
+Author: Seyoung <ksy4961@gmail.com>
+Date:   Wed May 17 09:14:34 2017 +0900
+
+    First commit
