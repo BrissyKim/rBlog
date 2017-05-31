@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class Admin::SessionsControllerTest < ActionDispatch::IntegrationTest
+class Admin::SessionsControllerTest < ActionController::TestCase
   test "should get new" do
-    get admin_sessions_new_url
+    get :new
     assert_response :success
   end
 
   test "should get create" do
-    get admin_sessions_create_url
+    get :create
     assert_response :success
   end
 

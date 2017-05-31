@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class Admin::CommentsControllerTest < ActionDispatch::IntegrationTest
-  test "should get destory" do
-    get admin_comments_destory_url
+class Admin::CommentsControllerTest < ActionController::TestCase
+  test "should get destroy" do
+    get :destroy
     assert_response :success
   end
 

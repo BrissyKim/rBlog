@@ -1,124 +1,128 @@
 Rails.application.routes.draw do
   get 'contact' => 'contacts#new'
-
   get 'contacts/create'
-
   get 'about' => 'about#index'
 
+
   namespace :admin do
-    get 'sessions/new'
+  get "login" => "sessions#new", :as => "login"
   end
 
   namespace :admin do
-    get 'sessions/create'
+  get "logout" => "sessions#destroy", :as => "logout"
   end
 
   namespace :admin do
-    get 'users/new'
+  get 'sessions/create'
   end
 
   namespace :admin do
-    get 'users/create'
+  get 'users/new'
   end
 
   namespace :admin do
-    get 'users/edit'
+  get 'users/create'
   end
 
   namespace :admin do
-    get 'users/update'
+  get 'users/edit'
   end
 
   namespace :admin do
-    get 'users/destory'
+  get 'users/update'
   end
 
   namespace :admin do
-    get 'users/index'
+  get 'users/destroy'
   end
 
   namespace :admin do
-    get 'users/show'
+  get 'users/index'
   end
 
   namespace :admin do
-    get 'comments/destory'
+  get 'users/show'
+  end
+
+  namespace :admin do
+  get 'comments/destroy'
   end
 
   get 'comments/new'
 
   namespace :admin do
-    get 'categories/new'
+  get 'categories/new'
   end
 
   namespace :admin do
-    get 'categories/create'
+  get 'categories/create'
   end
 
   namespace :admin do
-    get 'categories/edit'
+  get 'categories/edit'
   end
 
   namespace :admin do
-    get 'categories/update'
+  get 'categories/update'
   end
 
   namespace :admin do
-    get 'categories/destory'
+  get 'categories/destroy'
   end
 
   namespace :admin do
-    get 'categories/index'
+  get 'categories/index'
   end
 
   namespace :admin do
-    get 'categories/show'
+  get 'categories/show'
   end
 
   get 'categories/show'
 
   namespace :admin do
-    get 'posts/new'
+  get 'posts/new'
   end
 
   namespace :admin do
-    get 'posts/create'
+  get 'posts/create'
   end
 
   namespace :admin do
-    get 'posts/edit'
+  get 'posts/edit'
   end
 
   namespace :admin do
-    get 'posts/update'
+  get 'posts/update'
   end
 
   namespace :admin do
-    get 'posts/destory'
+  get 'posts/destroy'
   end
 
   namespace :admin do
-    get 'posts/index'
+  get 'posts/index'
   end
 
   namespace :admin do
-    get 'posts/show'
+  get 'posts/show'
   end
 
   get 'posts/index'
 
   get 'posts/show'
 
-  resources :posts, :categories, :comments
+  resources :posts, :categories
   resources "contacts", only: [:new, :create]
 
   namespace :admin do
-    resources :posts, :categories, :comments, :users
+    resources :posts, :categories, :comments, :users, :sessions
+  end
+
+  resources :posts do
+    resources :comments
   end
 
   root 'posts#index'
-
-
-
 
 end

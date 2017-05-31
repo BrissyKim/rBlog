@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class ContactsControllerTest < ActionDispatch::IntegrationTest
+class ContactsControllerTest < ActionController::TestCase
   test "should get new" do
-    get contacts_new_url
+    get :new
     assert_response :success
   end
 
   test "should get create" do
-    get contacts_create_url
+    get :create
     assert_response :success
   end
 
